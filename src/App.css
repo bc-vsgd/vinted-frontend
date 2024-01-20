@@ -1,0 +1,35 @@
+@import "./assets/css/reset.css";
+
+header > div {
+  display: flex;
+}
+.container {
+  width: 1220px;
+  margin: 0 auto;
+}
+.offers-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.home-offer-div > div:first-child img {
+  height: 20px;
+  border-radius: 50%;
+}
+.home-offer-div > div:nth-child(2) img {
+  height: 360px;
+  width: 235px;
+}
+
+.offer-div {
+  display: flex;
+}
+.offer-div div:first-child img {
+  height: 600px;
+  width: 450px;
+  object-fit: cover;
+}
+.offer-div div:nth-child(2) img {
+  height: 30px;
+  border-radius: 50%;
+}
