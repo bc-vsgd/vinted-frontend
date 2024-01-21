@@ -1,0 +1,136 @@
+/* COMMON */
+/* COMMON */
+
+body,
+button,
+input {
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  width: 1224px;
+  margin: 0 auto;
+}
+
+/* HOVER */
+/* HOVER */
+
+button:hover {
+  cursor: pointer;
+}
+
+/* HEADER */
+/* HEADER */
+
+header > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > div > div:nth-child(2) {
+  position: relative;
+}
+header .fa-magnifying-glass {
+  color: #cbcccd;
+
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+header img {
+  color: #09b0ba;
+}
+header input {
+  background-color: #f5f6f7;
+  border: none;
+  border-radius: 5px;
+}
+header input::placeholder {
+  color: #cbcccd;
+}
+header > div > div:nth-child(3) {
+  display: flex;
+}
+.sign-up-button,
+.log-in-button {
+  background-color: white;
+  color: #2db0ba;
+  border: 1px solid #2db0ba;
+  border-radius: 5px;
+}
+.publish-button {
+  background-color: #2db0ba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* HOME */
+/* HOME */
+
+/* HERO */
+/* HERO */
+
+.hero {
+  position: relative;
+}
+.hero .container > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: white;
+}
+.hero button {
+  background-color: #2db0ba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.hero img {
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+
+/* OFFERS DIV */
+/* OFFERS DIV */
+
+.offers-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-offer-div > div:first-child {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.home-offer-div > div:first-child span {
+  color: #999999;
+}
+.offer-link div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.offer-link p:not(:first-of-type) {
+  color: #999999;
+}
+
+/* FOOTER */
+/* FOOTER */
+
+footer div {
+  margin: 0 auto;
+}
+footer div,
+footer a {
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

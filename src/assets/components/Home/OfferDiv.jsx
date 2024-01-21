@@ -22,11 +22,13 @@ const OfferDiv = ({ offer }) => {
         <span>{owner}</span>
       </div>
       <div>
-        <Link to={`/offer/${id}`}>
+        <Link to={`/offer/${id}`} className="offer-link">
           <img src={image} alt="Photo produit" />
-          <p>{`${price} €`}</p>
-          <p>{size}</p>
-          <p>{brand}</p>
+          <div>
+            <p>{`${price} €`}</p>
+            <p>{size}</p>
+            <p>{brand}</p>
+          </div>
         </Link>
       </div>
     </div>

@@ -1,35 +1,97 @@
 @import "./assets/css/reset.css";
+@import "./assets/css/common.css";
 
 /* COMMON */
 /* COMMON */
-
-.container {
-  width: 1220px;
-  margin: 0 auto;
-}
 
 /* HEADER */
 /* HEADER */
 
 header > div {
-  display: flex;
+  gap: 60px;
+  padding: 15px 0;
+}
+header > div > div:nth-child(3) {
+  gap: 20px;
+}
+header button {
+  font-size: 12px;
+}
+header img {
+  width: 100px;
+}
+header input {
+  width: 550px;
+  height: 45px;
+  font-size: 14px;
+}
+header button {
+  width: 125px;
+  height: 30px;
 }
 
 /* HOME PAGE */
 /* HOME PAGE */
 
+/* HERO */
+/* HERO */
+
+.hero {
+  margin-bottom: 30px;
+}
+.hero .container {
+  padding-top: 75px;
+  height: 460px;
+}
+.hero .container > div:first-child {
+  width: 410px;
+  height: 270px;
+  padding: 60px 0 50px 25px;
+}
+.hero p {
+  font-size: 34px;
+  line-height: 40px;
+}
+.hero button {
+  width: 200px;
+  height: 45px;
+  font-size: 16px;
+}
+.hero img {
+  height: 460px;
+  width: 100vw;
+}
+
+/* OFFERS DIV */
+/* OFFERS DIV */
+
 .offers-div {
-  display: flex;
-  flex-wrap: wrap;
+  gap: 10px;
+}
+.home-offer-div > div:first-child {
+  padding: 10px 0 10px 10px;
   gap: 10px;
 }
 .home-offer-div > div:first-child img {
   height: 20px;
   border-radius: 50%;
 }
+.home-offer-div > div:first-child span {
+  font-size: 12px;
+}
 .home-offer-div > div:nth-child(2) img {
   height: 360px;
   width: 235px;
+}
+.offer-link div {
+  padding: 10px;
+  gap: 5px;
+}
+.offer-link p:first-of-type {
+  font-size: 14px;
+}
+.offer-link p:not(:first-of-type) {
+  font-size: 12px;
 }
 
 /* OFFER PAGE */
@@ -46,4 +108,26 @@ header > div {
 .offer-div div:nth-child(2) img {
   height: 30px;
   border-radius: 50%;
+}
+
+/* FOOTER */
+/* FOOTER */
+
+footer {
+  margin-top: 70px;
+}
+footer div {
+  font-size: 14px;
+  width: 600px;
+  padding: 10px 0 20px 0;
+}
+footer img {
+  height: 25px;
+}
+footer .fa-github {
+  font-size: 25px;
+}
+footer .fa-linkedin {
+  font-size: 25px;
+  color: #0b65c2;
 }
