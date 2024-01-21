@@ -6,24 +6,31 @@ import axios from "axios";
 import "./App.css";
 
 // Pages
-import HomePage from "./assets/pages/HomePage";
-import OfferPage from "./assets/pages/OfferPage";
+import Home from "./assets/pages/Home";
+import Offer from "./assets/pages/Offer";
 import NotFound from "./assets/pages/NotFound";
 
 // Components
 import Header from "./assets/components/Header";
+import Footer from "./assets/components/Footer";
 
 function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  //
+  // API
+  // const url = "https://lereacteur-vinted-api.herokuapp.com/offers";
+  // LCOAL SERVER
+  // const url = "http://localhost:3000";
+  // REMOTE SERVER
+  const url = "https://site--backend-vinted--r6xgg7xm7vcz.code.run";
+  //
 
   useEffect(() => {
-    const url = "https://lereacteur-vinted-api.herokuapp.com/offers";
     const fetchData = async (url) => {
       try {
         const response = await axios.get(url);
-        // console.log(response.data);
-        setData(response.data);
+        setData(response.data.data);
         setIsLoading(false);
       } catch (error) {
         console.log(error.response);
@@ -38,11 +45,11 @@ function App() {
         <Router>
           <Header />
           <Routes>
-            <Route path="/" element={<HomePage data={data} />} />
-            {/* <Route path="/offer" element={<Offer />} /> */}
-            <Route path="/offer/:id" element={<OfferPage />} />
-            <Route path="*" element={NotFound} />
+            <Route path="/" element={<Home data={data} />} />
+            <Route path="/offer/:id" element={<Offer url={url} />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
+          <Footer />
         </Router>
       )}
     </>

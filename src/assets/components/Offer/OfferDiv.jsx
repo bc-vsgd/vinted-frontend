@@ -1,19 +1,15 @@
 const OfferDiv = ({ offer }) => {
-  //   console.log(offer);
   const id = offer._id;
   const name = offer.product_name;
-  console.log(name);
   const description = offer.product_description;
-  console.log(description);
   const price = offer.product_price;
-  //   let details = []
+  // product_details array
   let brand = "";
   let size = "";
   let condition = "";
   let color = "";
   let place = "";
   let payment = "";
-  //   const details = offer.product_details
   if (offer.product_details) {
     if (offer.product_details[0]) {
       brand = offer.product_details[0].MARQUE;
@@ -34,23 +30,22 @@ const OfferDiv = ({ offer }) => {
       payment = offer.product_details[5]["MODES DE PAIEMENT"];
     }
   }
+  // Image
   let imageId;
   let image;
   if (offer.product_image) {
     imageId = offer.product_image.public_id;
     image = offer.product_image.secure_url;
   }
-
+  // Owner
   let ownerId;
   let owner;
   let avatar;
   let avatarId;
-
   if (offer.owner) {
     ownerId = offer.owner._id;
     if (offer.owner.account) {
       owner = offer.owner.account.username;
-
       if (offer.owner.account.avatar) {
         avatarId = offer.owner.account.avatar.public_id;
         avatar = offer.owner.account.avatar.secure_url;

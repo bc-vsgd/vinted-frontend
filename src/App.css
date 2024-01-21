@@ -1,12 +1,23 @@
 @import "./assets/css/reset.css";
 
-header > div {
-  display: flex;
-}
+/* COMMON */
+/* COMMON */
+
 .container {
   width: 1220px;
   margin: 0 auto;
 }
+
+/* HEADER */
+/* HEADER */
+
+header > div {
+  display: flex;
+}
+
+/* HOME PAGE */
+/* HOME PAGE */
+
 .offers-div {
   display: flex;
   flex-wrap: wrap;
@@ -20,6 +31,9 @@ header > div {
   height: 360px;
   width: 235px;
 }
+
+/* OFFER PAGE */
+/* OFFER PAGE */
 
 .offer-div {
   display: flex;
