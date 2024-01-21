@@ -43,9 +43,9 @@ function App() {
   // API
   // const url = "https://lereacteur-vinted-api.herokuapp.com/offers";
   // LCOAL SERVER
-  const url = "http://localhost:3000";
+  // const url = "http://localhost:3000";
   // REMOTE SERVER
-  // const url = "https://site--backend-vinted--r6xgg7xm7vcz.code.run";
+  const url = "https://site--backend-vinted--r6xgg7xm7vcz.code.run";
   //
 
   useEffect(() => {
