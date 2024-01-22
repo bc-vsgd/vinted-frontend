@@ -11,7 +11,7 @@ const Home = ({ data }) => {
       <div className="hero">
         <div>
           <div className="container">
-            <div className="fixed">
+            <div>
               <p>Prêts à faire du tri dans vos placards ?</p>
               <button>Commencer à vendre</button>
             </div>

@@ -54,13 +54,13 @@ const OfferDiv = ({ offer }) => {
   }
 
   return (
-    <div className="offer-div">
+    <div className="offer-div container">
       <div>{image && <img src={image} alt="Product image" />}</div>
 
       <div>
         <p>{price} €</p>
 
-        <div>
+        <div className="details-div">
           {brand && (
             <div>
               <span>MARQUE</span>
@@ -99,7 +99,7 @@ const OfferDiv = ({ offer }) => {
           )}
         </div>
 
-        <div>
+        <div className="description-div">
           <p>{name}</p>
           <p>{description}</p>
           <div>

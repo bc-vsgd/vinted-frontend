@@ -33,7 +33,6 @@ const Offer = ({ url }) => {
   }, []);
   return (
     <div className="offer-page">
-      <Link to="/">Accueil</Link>
       <OfferDiv offer={offer} />
     </div>
   );

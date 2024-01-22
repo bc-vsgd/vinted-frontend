@@ -9,6 +9,7 @@ input {
 a {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 .container {
   width: 1224px;
@@ -97,8 +98,8 @@ header > div > div:nth-child(3) {
   z-index: -1;
 }
 
-/* OFFERS DIV */
-/* OFFERS DIV */
+/* ALL OFFERS DIV */
+/* ALL OFFERS DIV */
 
 .offers-div {
   display: flex;
@@ -121,9 +122,75 @@ header > div > div:nth-child(3) {
   color: #999999;
 }
 
-/* FOOTER */
-/* FOOTER */
+/* ONE OFFER DIV */
+/* ONE OFFER DIV */
 
+.offer-page {
+  background-color: #eaedee;
+}
+.offer-div {
+  display: flex;
+  justify-content: space-around;
+}
+.offer-div div:first-child img {
+  object-fit: cover;
+}
+.offer-div > div:nth-child(2) {
+  background-color: white;
+}
+.offer-div > div:nth-child(2) > p {
+  color: #111111;
+}
+.offer-div div:nth-child(2) img {
+  border-radius: 50%;
+}
+.details-div span {
+  width: 48%;
+}
+.details-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.details-div > div {
+  display: flex;
+  justify-content: space-between;
+}
+.details-div span:first-child {
+  color: #999999;
+}
+.details-div span:nth-child(2) {
+  color: #666666;
+}
+.description-div {
+  display: flex;
+  flex-direction: column;
+}
+.description-div p:first-of-type,
+.description-div span {
+  color: black;
+}
+.description-div p:nth-of-type(2) {
+  color: #666666;
+}
+.description-div > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.offer-div button {
+  border: none;
+  border-radius: 5px;
+  background-color: #08acb6;
+  color: white;
+}
+
+/* FOOTER */
+/* FOOTER */
+footer {
+  background-color: #eaedee;
+}
 footer div {
   margin: 0 auto;
 }
