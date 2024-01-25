@@ -25,12 +25,13 @@ const Footer = () => {
         <a href="https://github.com/bc-vsgd" target="_blank">
           <span>Benoît Charles</span>
           <FontAwesomeIcon icon="fa-brands fa-github" />
-          <a
-            href="https://www.linkedin.com/in/beno%C3%AEt-charles-b641672a6/"
-            target="_blank"
-          >
-            <FontAwesomeIcon icon="fa-brands fa-linkedin" />
-          </a>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/beno%C3%AEt-charles-b641672a6/"
+          target="_blank"
+        >
+          <FontAwesomeIcon icon="fa-brands fa-linkedin" />
+          {/* </a> */}
         </a>
       </div>
     </footer>

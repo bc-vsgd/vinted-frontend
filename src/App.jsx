@@ -8,6 +8,8 @@ import "./App.css";
 // Pages
 import Home from "./assets/pages/Home";
 import Offer from "./assets/pages/Offer";
+import Signup from "./assets/pages/Signup";
+import Login from "./assets/pages/Login";
 import NotFound from "./assets/pages/NotFound";
 
 // Components
@@ -39,13 +41,14 @@ library.add(
 function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [token, setToken] = useState("");
   //
   // API
   // const url = "https://lereacteur-vinted-api.herokuapp.com/offers";
   // LCOAL SERVER
-  // const url = "http://localhost:3000";
+  const url = "http://localhost:3000";
   // REMOTE SERVER
-  const url = "https://site--backend-vinted--r6xgg7xm7vcz.code.run";
+  // const url = "https://site--backend-vinted--r6xgg7xm7vcz.code.run";
   //
 
   useEffect(() => {
@@ -60,15 +63,23 @@ function App() {
     };
     fetchData(url);
   }, []);
-
+  console.log("token >>> ", token);
   return (
     <>
       {!isLoading && (
         <Router>
-          <Header />
+          <Header token={token} setToken={setToken} />
           <Routes>
             <Route path="/" element={<Home data={data} />} />
             <Route path="/offer/:id" element={<Offer url={url} />} />
+            <Route
+              path="/signup"
+              element={<Signup url={url} setToken={setToken} />}
+            />
+            <Route
+              path="/login"
+              element={<Login url={url} setToken={setToken} />}
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

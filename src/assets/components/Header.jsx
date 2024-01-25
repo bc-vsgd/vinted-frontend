@@ -1,9 +1,13 @@
-import { Link } from "react-router-dom";
+// import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Image
 import vinted_logo from "../img/vinted_logo.png";
+// Cookies
+import Cookies from "js-cookie";
 
-const Header = () => {
+const Header = ({ token, setToken }) => {
+  const navigate = useNavigate();
   return (
     <header>
       <div className="container">
@@ -17,8 +21,25 @@ const Header = () => {
           <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
         </div>
         <div>
-          <button className="sign-up-button">S'inscrire</button>
-          <button className="log-in-button">Se connecter</button>
+          <Link to="/signup">
+            <button className="sign-up-button">S'inscrire</button>
+          </Link>
+          {!token ? (
+            <Link to="/login" token={token}>
+              <button className="log-in-button">Se connecter</button>
+            </Link>
+          ) : (
+            <button
+              className="log-out-button"
+              onClick={() => {
+                Cookies.remove(token);
+                setToken("");
+                navigate("/");
+              }}
+            >
+              Se déconnecter
+            </button>
+          )}
         </div>
         <button className="publish-button">Vends tes articles</button>
       </div>
