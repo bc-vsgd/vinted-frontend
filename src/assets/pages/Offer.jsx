@@ -9,22 +9,11 @@ const Offer = ({ url }) => {
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchOfferData = async () => {
+    const fetchOfferData = async (url) => {
       try {
-        // DIRECTLY API REQUEST
-        //
-        // const response = await axios.get(`${url}/offers);
-        // const offers = response.data.offers;
-        // const indexFound = offers.findIndex((offer) => offer._id === id);
-        // console.log(indexFound);
-        // setOffer(offers[indexFound]);
-        //
-        // BACKEND REQUEST
-        //
         const response = await axios.get(`${url}/offer/${id}`);
-        console.log(response.data);
-        const offer = response.data;
-        setOffer(offer);
+        const foundOffer = response.data.offer;
+        setOffer(foundOffer);
       } catch (error) {
         console.log(error.response);
       }

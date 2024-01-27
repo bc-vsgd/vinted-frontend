@@ -26,13 +26,13 @@ const Header = ({ token, setToken }) => {
           </Link>
           {!token ? (
             <Link to="/login" token={token}>
-              <button className="log-in-button">Se connecter</button>
+              <button className="login-button">Se connecter</button>
             </Link>
           ) : (
             <button
-              className="log-out-button"
+              className="logout-button"
               onClick={() => {
-                Cookies.remove(token);
+                Cookies.remove("token");
                 setToken("");
                 navigate("/");
               }}

@@ -1,4 +1,5 @@
 const OfferDiv = ({ offer }) => {
+  // console.log("offer/offer div >>> offer >>>> ", offer);
   const id = offer._id;
   const name = offer.product_name;
   const description = offer.product_description;
@@ -37,6 +38,18 @@ const OfferDiv = ({ offer }) => {
     imageId = offer.product_image.public_id;
     image = offer.product_image.secure_url;
   }
+  // Pictures
+  const picturesUrl = [];
+  // First picture url = image url
+  if (offer.product_pictures) {
+    const pictures = offer.product_pictures;
+    for (let i = 0; i < pictures.length; i++) {
+      picturesUrl.push(pictures[i].secure_url);
+    }
+    // console.log("offer/offerdiv >>>>>> picturesUrl >>>>> ", picturesUrl);
+    // console.log("offer/offerdiv >>>>>> picturesUrl[0] >>>>> ", picturesUrl[0]);
+    // console.log("offer/offerdiv >>>>>> image >>>>> ", image);
+  }
   // Owner
   let ownerId;
   let owner;
@@ -52,14 +65,12 @@ const OfferDiv = ({ offer }) => {
       }
     }
   }
-
+  // Component return
   return (
     <div className="offer-div container">
       <div>{image && <img src={image} alt="Product image" />}</div>
-
       <div>
         <p>{price} €</p>
-
         <div className="details-div">
           {brand && (
             <div>
@@ -98,7 +109,6 @@ const OfferDiv = ({ offer }) => {
             </div>
           )}
         </div>
-
         <div className="description-div">
           <p>{name}</p>
           <p>{description}</p>
@@ -107,7 +117,6 @@ const OfferDiv = ({ offer }) => {
             {owner && <span>{owner}</span>}
           </div>
         </div>
-
         <button>Acheter</button>
       </div>
     </div>
