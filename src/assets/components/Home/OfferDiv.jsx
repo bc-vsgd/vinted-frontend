@@ -6,7 +6,7 @@ const OfferDiv = ({ offer }) => {
   const price = offer.product_price;
   const brand = offer.product_details[0].MARQUE;
   const size = offer.product_details[1].TAILLE;
-  const imageId = offer.product_image.public_id;
+  // const imageId = offer.product_image.public_id;
   const image = offer.product_image.secure_url;
 
   const ownerId = offer.owner._id;

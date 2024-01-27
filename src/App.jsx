@@ -40,8 +40,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [token, setToken] = useState("");
   //
-  // API
-  // const url = "https://lereacteur-vinted-api.herokuapp.com/offers";
   // LCOAL SERVER
   // const url = "http://localhost:3000";
   // REMOTE SERVER
@@ -54,6 +52,7 @@ function App() {
         // response = offers array
         const response = await axios.get(url);
         setData(response);
+        // console.log("App >> useEffect >> data", data);
         setIsLoading(false);
       } catch (error) {
         console.log(error.response);
