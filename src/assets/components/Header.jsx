@@ -21,13 +21,15 @@ const Header = ({ token, setToken }) => {
           <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
         </div>
         <div>
-          <Link to="/signup">
-            <button className="sign-up-button">S'inscrire</button>
-          </Link>
           {!token ? (
-            <Link to="/login" token={token}>
-              <button className="login-button">Se connecter</button>
-            </Link>
+            <>
+              <Link to="/signup">
+                <button className="sign-up-button">S'inscrire</button>
+              </Link>
+              <Link to="/login" token={token}>
+                <button className="login-button">Se connecter</button>
+              </Link>
+            </>
           ) : (
             <button
               className="logout-button"

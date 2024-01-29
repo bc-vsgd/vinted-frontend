@@ -1,27 +1,51 @@
+// Packages
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 // Components
 import OffersDiv from "../components/Home/OffersDiv";
 // Images
 const heroImageUrl =
   "https://static.vinted.com/assets/seller-promotion/other/banner-wide-9b45d0aa9a311c4ff6013e9cf3bc2b6646468be3d2f553192c63598685fcc177.jpg";
 
-const Home = ({ data }) => {
-  // data: {count, offers}
+const Home = ({ url }) => {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async (url) => {
+      try {
+        // response= offers array
+        const response = await axios.get(url);
+        setData(response);
+      } catch (error) {
+        console.log(error.response);
+      }
+      setIsLoading(false);
+    };
+    fetchData(url);
+  }, []);
+
   return (
-    <div className="homepage">
-      <div className="hero">
-        <div>
-          <div className="container">
+    <>
+      {!isLoading && (
+        <div className="homepage">
+          <div className="hero">
             <div>
-              <p>Prêts à faire du tri dans vos placards ?</p>
-              <button>Commencer à vendre</button>
+              <div className="container">
+                <div>
+                  <p>Prêts à faire du tri dans vos placards ?</p>
+                  <button>Commencer à vendre</button>
+                </div>
+              </div>
+              <img src={heroImageUrl} alt="Hero image" />
             </div>
           </div>
-          <img src={heroImageUrl} alt="Hero image" />
-        </div>
-      </div>
 
-      <OffersDiv data={data} />
-    </div>
+          <OffersDiv data={data} />
+        </div>
+      )}
+    </>
   );
 };
 

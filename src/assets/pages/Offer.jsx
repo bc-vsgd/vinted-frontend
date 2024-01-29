@@ -6,6 +6,7 @@ import OfferDiv from "../components/Offer/OfferDiv";
 
 const Offer = ({ url }) => {
   const [offer, setOffer] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,10 +18,13 @@ const Offer = ({ url }) => {
       } catch (error) {
         console.log(error.response);
       }
+      setIsLoading(false);
     };
     fetchOfferData(url);
   }, []);
-  return (
+  return isLoading ? (
+    <p>Loading ...</p>
+  ) : (
     <div className="offer-page">
       <OfferDiv offer={offer} />
     </div>
