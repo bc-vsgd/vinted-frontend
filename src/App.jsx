@@ -7,6 +7,7 @@ import Home from "./assets/pages/Home";
 import Offer from "./assets/pages/Offer";
 import Signup from "./assets/pages/Signup";
 import Login from "./assets/pages/Login";
+import Publish from "./assets/pages/Publish/Publish";
 import NotFound from "./assets/pages/NotFound";
 // Components
 import Header from "./assets/components/Header";
@@ -55,6 +56,7 @@ function App() {
             path="/login"
             element={<Login url={url} setToken={setToken} />}
           />
+          <Route path="/publish" element={<Publish token={token} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
