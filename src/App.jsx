@@ -42,9 +42,9 @@ function App() {
   const [priceMin, setPriceMin] = useState("");
 
   // LOCAL SERVER
-  const url = "http://localhost:3000";
+  // const url = "http://localhost:3000";
   // REMOTE SERVER
-  // const url = "https://site--backend-vinted--r6xgg7xm7vcz.code.run";
+  const url = "https://site--backend-vinted--r6xgg7xm7vcz.code.run";
   console.log("token >>> ", token);
   console.log(sort);
 
