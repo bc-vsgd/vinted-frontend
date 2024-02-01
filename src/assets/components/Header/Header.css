@@ -1,0 +1,45 @@
+header > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > div > div:nth-child(2) {
+  position: relative;
+}
+header .fa-magnifying-glass {
+  color: #cbcccd;
+
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+header img {
+  color: #09b0ba;
+}
+header input {
+  background-color: #f5f6f7;
+  border: none;
+  border-radius: 5px;
+}
+header input::placeholder {
+  color: #cbcccd;
+}
+header > div > div:nth-child(3) {
+  display: flex;
+}
+.sign-up-button,
+.log-in-button {
+  background-color: white;
+  color: #2db0ba;
+  border: 1px solid #2db0ba;
+  border-radius: 5px;
+}
+.publish-button {
+  background-color: #2db0ba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+header .price-min-label {
+  display: flex;
+}

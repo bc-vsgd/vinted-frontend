@@ -2,10 +2,12 @@
 import "./Publish.css";
 // Packages
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import axios from "axios";
 //
-const Publish = ({ token }) => {
-  const [images, setImages] = useState(null);
+const Publish = ({ url, token }) => {
+  const navigate = useNavigate();
+  const [picture, setPicture] = useState(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [brand, setBrand] = useState("");
@@ -14,24 +16,55 @@ const Publish = ({ token }) => {
   const [condition, setCondition] = useState("");
   const [city, setCity] = useState("");
   const [price, setPrice] = useState(0);
-  // console.log(title);
-  const handleSubmit = (e) => {
+  const [payment, setPayment] = useState("");
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log("submit");
-    console.log(title, description, brand, size, color, condition, city, price);
+    try {
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("picture", picture);
+      formData.append("description", description);
+      formData.append("brand", brand);
+      formData.append("size", size);
+      formData.append("color", color);
+      formData.append("condition", condition);
+      formData.append("city", city);
+      formData.append("price", price);
+      formData.append("payment", payment);
+
+      const response = await axios.post(`${url}/offer/publish`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      console.log(response.data);
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
   return token ? (
-    // return (
     <div className="publish-div">
       <h1>Vends ton article</h1>
       <form onSubmit={handleSubmit}>
-        {/* Image(s) */}
-        <div
-          onClick={() => {
-            console.log("clic photo");
-          }}
-        >
-          Div photo
+        {/* Picture(s) */}
+        <div>
+          <div>
+            <label>
+              Ajoute une photo
+              <input
+                type="file"
+                name="picture"
+                id="picture"
+                onChange={(e) => {
+                  console.log(e.target.files);
+                  setPicture(e.target.files[0]);
+                }}
+              />
+            </label>
+            {picture && <img src={URL.createObjectURL(picture)} alt="Image" />}
+          </div>
         </div>
         {/* title, description */}
         <div>
@@ -167,8 +200,6 @@ const Publish = ({ token }) => {
       </form>
     </div>
   ) : (
-    // );
-    // <div>Pas token</div>
     <Navigate to="/login" />
   );
 };

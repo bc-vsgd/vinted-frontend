@@ -20,3 +20,7 @@ form > div > div label {
   display: flex;
   justify-content: space-between;
 }
+.publish-div img {
+  width: 200px;
+  height: 200px;
+}
