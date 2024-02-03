@@ -1,0 +1,17 @@
+.payment-div {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.payment-div-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.payment-div-div div {
+  /* width: 600px; */
+  display: flex;
+  justify-content: space-between;
+}

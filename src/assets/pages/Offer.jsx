@@ -26,7 +26,7 @@ const Offer = ({ url, token }) => {
     <p>Loading ...</p>
   ) : (
     <div className="offer-page">
-      <OfferDiv offer={offer} setOffer={setOffer} token={token} />
+      <OfferDiv offer={offer} token={token} />
     </div>
   );
 };

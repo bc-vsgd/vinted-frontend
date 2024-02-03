@@ -1,7 +1,6 @@
-import { Navigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const OfferDiv = ({ offer, token }) => {
-  // console.log("offer/offer div >>> offer >>>> ", offer);
   const id = offer._id;
   const name = offer.product_name;
   const description = offer.product_description;
@@ -48,9 +47,6 @@ const OfferDiv = ({ offer, token }) => {
     for (let i = 0; i < pictures.length; i++) {
       picturesUrl.push(pictures[i].secure_url);
     }
-    // console.log("offer/offerdiv >>>>>> picturesUrl >>>>> ", picturesUrl);
-    // console.log("offer/offerdiv >>>>>> picturesUrl[0] >>>>> ", picturesUrl[0]);
-    // console.log("offer/offerdiv >>>>>> image >>>>> ", image);
   }
   // Owner
   let ownerId;
@@ -120,7 +116,7 @@ const OfferDiv = ({ offer, token }) => {
           </div>
         </div>
         {token ? (
-          <Link to="/payment" offer={offer}>
+          <Link to="/payment" state={{ id, price, title: name }}>
             <button>Acheter</button>
           </Link>
         ) : (

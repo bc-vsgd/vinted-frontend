@@ -89,7 +89,10 @@ function App() {
             path="/publish"
             element={<Publish url={url} token={token} />}
           />
-          <Route path="/payment" element={<Payment />} />
+          <Route
+            path="/payment"
+            element={<Payment url={url} token={token} />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
