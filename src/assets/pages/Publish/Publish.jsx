@@ -17,6 +17,7 @@ const Publish = ({ url, token }) => {
   const [city, setCity] = useState("");
   const [price, setPrice] = useState(0);
   const [payment, setPayment] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

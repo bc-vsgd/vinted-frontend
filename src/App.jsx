@@ -32,6 +32,7 @@ import Signup from "./assets/pages/Signup";
 import Login from "./assets/pages/Login";
 import Publish from "./assets/pages/Publish/Publish";
 import NotFound from "./assets/pages/NotFound";
+import Payment from "./assets/pages/Payment/Payment";
 // Components
 import Header from "./assets/components/Header/Header";
 import Footer from "./assets/components/Footer";
@@ -72,7 +73,10 @@ function App() {
               />
             }
           />
-          <Route path="/offer/:id" element={<Offer url={url} />} />
+          <Route
+            path="/offer/:id"
+            element={<Offer url={url} token={token} />}
+          />
           <Route
             path="/signup"
             element={<Signup url={url} setToken={setToken} />}
@@ -85,6 +89,7 @@ function App() {
             path="/publish"
             element={<Publish url={url} token={token} />}
           />
+          <Route path="/payment" element={<Payment />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

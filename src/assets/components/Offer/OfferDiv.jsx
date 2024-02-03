@@ -1,4 +1,6 @@
-const OfferDiv = ({ offer }) => {
+import { Navigate, Link } from "react-router-dom";
+
+const OfferDiv = ({ offer, token }) => {
   // console.log("offer/offer div >>> offer >>>> ", offer);
   const id = offer._id;
   const name = offer.product_name;
@@ -117,7 +119,15 @@ const OfferDiv = ({ offer }) => {
             {owner && <span>{owner}</span>}
           </div>
         </div>
-        <button>Acheter</button>
+        {token ? (
+          <Link to="/payment" offer={offer}>
+            <button>Acheter</button>
+          </Link>
+        ) : (
+          <Link to="/login">
+            <button>Acheter</button>
+          </Link>
+        )}
       </div>
     </div>
   );

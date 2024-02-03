@@ -4,7 +4,7 @@ import axios from "axios";
 // Components
 import OfferDiv from "../components/Offer/OfferDiv";
 
-const Offer = ({ url }) => {
+const Offer = ({ url, token }) => {
   const [offer, setOffer] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
@@ -26,7 +26,7 @@ const Offer = ({ url }) => {
     <p>Loading ...</p>
   ) : (
     <div className="offer-page">
-      <OfferDiv offer={offer} />
+      <OfferDiv offer={offer} setOffer={setOffer} token={token} />
     </div>
   );
 };
