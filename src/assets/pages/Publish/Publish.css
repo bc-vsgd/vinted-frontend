@@ -70,7 +70,6 @@
   width: 200px;
   height: 200px;
   object-fit: contain;
-  /* margin: 20px; */
 }
 .publish-div form > div:last-of-type {
   display: flex;
