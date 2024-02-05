@@ -1,14 +1,17 @@
+// Style
+import "./Home.css";
+
 // Packages
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import axios from "axios";
 // Components
-import OffersDiv from "../components/Home/OffersDiv";
+import OffersDiv from "../../components/Home/OffersDiv";
 // Images
 const heroImageUrl =
   "https://static.vinted.com/assets/seller-promotion/other/banner-wide-9b45d0aa9a311c4ff6013e9cf3bc2b6646468be3d2f553192c63598685fcc177.jpg";
 
-const Home = ({ url, sort, setSort, priceMin, setPriceMin }) => {
+const Home = ({ url, token, sort, setSort, priceMin, setPriceMin }) => {
   let [searchParams, setSearchParams] = useSearchParams();
   setSort(searchParams.get("sort") || "price-asc");
   setPriceMin(searchParams.get("priceMin") || "0");
@@ -41,7 +44,9 @@ const Home = ({ url, sort, setSort, priceMin, setPriceMin }) => {
               <div className="container">
                 <div>
                   <p>Prêts à faire du tri dans vos placards ?</p>
-                  <button>Commencer à vendre</button>
+                  <Link to="/publish" token={token}>
+                    <button>Commencer à vendre</button>
+                  </Link>
                 </div>
               </div>
               <img src={heroImageUrl} alt="Hero image" />

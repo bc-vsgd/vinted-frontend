@@ -1,3 +1,6 @@
+// Style
+import "./Signup.css";
+
 // Packages
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -73,7 +76,7 @@ const Signup = ({ url, setToken }) => {
           }}
         />
         <div>
-          <div>
+          <div className="signup-check-div">
             <input
               id="newsletter"
               name="newsletter"

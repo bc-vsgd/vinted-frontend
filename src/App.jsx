@@ -23,19 +23,19 @@ library.add(
 // Packages
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
-
+// Style
 import "./App.css";
 // Pages
-import Home from "./assets/pages/Home";
-import Offer from "./assets/pages/Offer";
-import Signup from "./assets/pages/Signup";
-import Login from "./assets/pages/Login";
+import Home from "./assets/pages/Home/Home";
+import Offer from "./assets/pages/Offer/Offer";
+import Signup from "./assets/pages/Signup/Signup";
+import Login from "./assets/pages/Login/Login";
 import Publish from "./assets/pages/Publish/Publish";
-import NotFound from "./assets/pages/NotFound";
+import NotFound from "./assets/pages/NotFound/NotFound";
 import Payment from "./assets/pages/Payment/Payment";
 // Components
 import Header from "./assets/components/Header/Header";
-import Footer from "./assets/components/Footer";
+import Footer from "./assets/components/Footer/Footer";
 
 function App() {
   const [token, setToken] = useState("");
@@ -66,6 +66,7 @@ function App() {
             element={
               <Home
                 url={url}
+                token={token}
                 sort={sort}
                 setSort={setSort}
                 priceMin={priceMin}

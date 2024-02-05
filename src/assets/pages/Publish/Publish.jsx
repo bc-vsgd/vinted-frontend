@@ -46,14 +46,14 @@ const Publish = ({ url, token }) => {
     }
   };
   return token ? (
-    <div className="publish-div">
+    <div className="publish-div container">
       <h1>Vends ton article</h1>
       <form onSubmit={handleSubmit}>
         {/* Picture(s) */}
-        <div>
+        <div className="picture-div">
           <div>
             <label>
-              Ajoute une photo
+              <span>Ajoute une photo</span>
               <input
                 type="file"
                 name="picture"
@@ -86,7 +86,9 @@ const Publish = ({ url, token }) => {
           <div>
             <label>
               Décris ton article
-              <input
+              <textarea
+                rows="5"
+                // cols="67"
                 type="text"
                 name="description"
                 id="description"
@@ -187,7 +189,7 @@ const Publish = ({ url, token }) => {
               />
             </label>
           </div>
-          <div>
+          <div className="checkbox-div">
             <label>
               <input type="checkbox" />
               Je suis intéressé(e) par les échanges

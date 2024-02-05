@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 // Components
-import OfferDiv from "../components/Offer/OfferDiv";
+import OfferDiv from "../../components/Offer/OfferDiv";
 
 const Offer = ({ url, token }) => {
   const [offer, setOffer] = useState({});

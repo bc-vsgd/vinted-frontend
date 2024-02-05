@@ -1,19 +1,16 @@
-// import { useState, useEffect } from "react";
+// Packages
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-
 import axios from "axios";
+import Cookies from "js-cookie";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Image
 import vinted_logo from "../../img/vinted_logo.png";
 // Style
 import "./Header.css";
-// Cookies
-import Cookies from "js-cookie";
 
 const Header = ({ token, setToken, sort, setSort, priceMin, setPriceMin }) => {
-  let [searchParams, setSearchParams] = useSearchParams();
-
+  // let [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   return (
     <header>
@@ -28,7 +25,7 @@ const Header = ({ token, setToken, sort, setSort, priceMin, setPriceMin }) => {
             <input type="text" placeholder="          Recherche des articles" />
             <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
           </div>
-          <div>
+          {/* <div>
             <div>
               <label>Trier par prix</label>
               <select
@@ -58,7 +55,7 @@ const Header = ({ token, setToken, sort, setSort, priceMin, setPriceMin }) => {
                 />
               </label>
             </div>
-          </div>
+          </div> */}
         </div>
         <div>
           {!token ? (

@@ -1,0 +1,26 @@
+footer {
+  background-color: #eaedee;
+  padding: 30px 0;
+}
+footer div {
+  margin: 0 auto;
+  font-size: 14px;
+  width: 600px;
+}
+footer div,
+footer a {
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  height: 25px;
+}
+footer .fa-github {
+  font-size: 25px;
+}
+footer .fa-linkedin {
+  font-size: 25px;
+  color: #0b65c2;
+}

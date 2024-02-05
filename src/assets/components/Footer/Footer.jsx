@@ -1,8 +1,11 @@
+// Style
+import "./Footer.css";
+
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Images
-import react_logo from "../img/logo_react.png";
-import reacteur_logo from "../img/logo_reacteur.png";
+import react_logo from "../../img/logo_react.png";
+import reacteur_logo from "../../img/logo_reacteur.png";
 
 const Footer = () => {
   return (

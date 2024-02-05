@@ -2,21 +2,30 @@ header > div {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 60px;
+  padding: 15px 0;
 }
 header > div > div:nth-child(2) {
   position: relative;
 }
+header > div > div:nth-child(3) {
+  display: flex;
+  gap: 20px;
+}
 header .fa-magnifying-glass {
   color: #cbcccd;
-
   position: absolute;
   left: 10px;
   top: 15px;
 }
 header img {
+  width: 100px;
   color: #09b0ba;
 }
 header input {
+  width: 550px;
+  height: 45px;
+  font-size: 14px;
   background-color: #f5f6f7;
   border: none;
   border-radius: 5px;
@@ -24,11 +33,14 @@ header input {
 header input::placeholder {
   color: #cbcccd;
 }
-header > div > div:nth-child(3) {
-  display: flex;
+header button {
+  font-size: 12px;
+  width: 125px;
+  height: 30px;
 }
 .sign-up-button,
-.log-in-button {
+.login-button,
+.logout-button {
   background-color: white;
   color: #2db0ba;
   border: 1px solid #2db0ba;
@@ -40,6 +52,6 @@ header > div > div:nth-child(3) {
   border: none;
   border-radius: 5px;
 }
-header .price-min-label {
+/* header .price-min-label {
   display: flex;
-}
+} */

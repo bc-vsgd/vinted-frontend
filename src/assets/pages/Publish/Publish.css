@@ -1,26 +1,89 @@
 .publish-div {
   display: flex;
   flex-direction: column;
-  width: 1000px;
   padding: 50px;
   gap: 20px;
+  background-color: #eaedee;
 }
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.publish-div h1 {
+  font-size: 24px;
 }
-form > div {
+.publish-div form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 1px solid blue;
 }
-form > div > div label {
+.publish-div form > div:not(:last-of-type) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border: 1px solid #d0d3d4;
+}
+.publish-div form > div > div label {
   display: flex;
   justify-content: space-between;
+  padding: 25px;
+  border-bottom: 1px solid #eaedee;
+}
+.publish-div form > div > div label input,
+.publish-div form > div > div label textarea {
+  border: none;
+  width: 550px;
+  border-bottom: 1px solid #eaedee;
+}
+.publish-div .picture-div {
+  padding: 25px;
+}
+.publish-div .picture-div label {
+  display: flex;
+  justify-content: center;
+  border: 1px dotted #eaedee;
+  padding: 75px;
+}
+.publish-div .picture-div span {
+  border: 1px solid #09b0ba;
+  border-radius: 5px;
+  color: #25a5c4;
+  padding: 15px;
+}
+.publish-div .picture-div input {
+  display: none;
+}
+.publish-div .picture-div span:hover {
+  cursor: pointer;
+}
+.publish-div textarea {
+  font-family: "Montserrat", sans-serif;
+}
+.publish-div input::placeholder {
+  color: #c4c7c9;
+}
+.publish-div textarea::placeholder {
+  color: #c4c7c9;
+}
+.publish-div .checkbox-div {
+  display: flex;
+  justify-content: flex-end;
 }
 .publish-div img {
   width: 200px;
   height: 200px;
+  object-fit: contain;
+  /* margin: 20px; */
+}
+.publish-div form > div:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.publish-div button {
+  background-color: #09b0ba;
+  color: white;
+  font-size: 16px;
+  width: 80px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
 }
