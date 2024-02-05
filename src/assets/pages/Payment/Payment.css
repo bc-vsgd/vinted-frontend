@@ -1,17 +1,60 @@
 .payment-div {
   width: 600px;
+  margin: 30px auto 100px auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
-
 .payment-div-div {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .payment-div-div div {
-  /* width: 600px; */
   display: flex;
   justify-content: space-between;
+}
+.payment-div > div:first-child {
+  font-size: 14px;
+  color: #999999;
+  padding-bottom: 20px;
+}
+.payment-div > div:nth-child(2) {
+  color: #666666;
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 50px;
+}
+.payment-div > div:nth-child(3) {
+  font-weight: bold;
+  padding-bottom: 40px;
+  padding-top: 35px;
+}
+.payment-div > div:nth-child(4) {
+  line-height: 20px;
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 30px;
+}
+.payment-div > div:nth-child(4) span {
+  font-weight: bold;
+}
+.payment-div .card-element {
+  /* height: 40px; */
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  padding: 15px;
+}
+.payment-div form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.payment-div button {
+  width: 600px;
+  height: 45px;
+  background-color: #01bb6a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
 }

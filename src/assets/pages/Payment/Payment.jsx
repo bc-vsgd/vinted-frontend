@@ -19,8 +19,8 @@ const Payment = ({ url, token }) => {
   const shippingFees = 0.8;
   const totalPrice = (price + protectionFees + shippingFees).toFixed(2);
 
-  console.log(totalPrice);
-  console.log("payment, offer >>>> ", id, price, title);
+  // console.log(totalPrice);
+  // console.log("payment, offer >>>> ", id, price, title);
   return (
     <div className="payment-div">
       <div>
@@ -51,9 +51,9 @@ const Payment = ({ url, token }) => {
 
       <div>
         <p>
-          Il ne vous reste plus qu'une étape pour vous offrir {title}. Vous
-          allez payer {totalPrice} € (frais de protection et frais de port
-          inclus).
+          Il ne vous reste plus qu'une étape pour vous offrir{" "}
+          <span>{title}</span>. Vous allez payer <span>{totalPrice} €</span>{" "}
+          (frais de protection et frais de port inclus).
         </p>
       </div>
 

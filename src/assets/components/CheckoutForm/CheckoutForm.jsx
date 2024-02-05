@@ -30,8 +30,8 @@ const CheckoutForm = ({ url, totalPrice, title, token }) => {
 
   return !completed ? (
     <form onSubmit={handleSubmit}>
-      <CardElement />
-      <button>Valider</button>
+      <CardElement className="card-element" />
+      <button>Payer</button>
     </form>
   ) : (
     <span>Paiement effectué !</span>
