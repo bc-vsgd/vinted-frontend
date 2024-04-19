@@ -45,7 +45,9 @@ function App() {
   // LOCAL SERVER
   // const url = "http://localhost:3000";
   // REMOTE SERVER
+  // Exercise server
   // const url = "https://site--backend-vinted--r6xgg7xm7vcz.code.run";
+  // My site server
   const url = "https://site--home--r6xgg7xm7vcz.code.run";
   // console.log("token >>> ", token);
   // console.log(sort);

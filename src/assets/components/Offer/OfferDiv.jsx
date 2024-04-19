@@ -1,3 +1,5 @@
+// In Offer page: displays the offer, with 'Buy' button
+
 import { Link } from "react-router-dom";
 
 const OfferDiv = ({ offer, token }) => {

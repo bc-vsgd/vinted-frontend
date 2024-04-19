@@ -1,7 +1,9 @@
+// Home page: offer thumbnail
+
 import { Link } from "react-router-dom";
 
 const OfferDiv = ({ offer }) => {
-  console.log("home / offer div >>>> offer >>>> ", offer);
+  // console.log("home / offer div >>>> offer >>>> ", offer);
   const id = offer._id;
   const price = offer.product_price;
   const brand = offer.product_details[0].MARQUE;

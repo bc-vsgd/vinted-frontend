@@ -33,12 +33,16 @@ const Publish = ({ url, token }) => {
       formData.append("price", price);
       formData.append("payment", payment);
 
-      const response = await axios.post(`${url}/offer/publish`, formData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await axios.post(
+        `${url}/vinted/offer/publish`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       console.log(response.data);
       navigate("/");
     } catch (error) {

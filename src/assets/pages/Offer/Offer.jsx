@@ -1,3 +1,5 @@
+// Page: displays one offer in Offer/OfferDiv component)
+
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -12,7 +14,7 @@ const Offer = ({ url, token }) => {
   useEffect(() => {
     const fetchOfferData = async (url) => {
       try {
-        const response = await axios.get(`${url}/offer/${id}`);
+        const response = await axios.get(`${url}/vinted/offer/${id}`);
         const foundOffer = response.data.offer;
         setOffer(foundOffer);
       } catch (error) {

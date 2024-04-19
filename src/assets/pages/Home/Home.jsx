@@ -22,12 +22,7 @@ const Home = ({ url, token, sort, setSort, priceMin, setPriceMin }) => {
   useEffect(() => {
     const fetchData = async (url) => {
       try {
-        // const response = await axios.get(
-        //   `${url}/offers?sort=${sort}&priceMin=${priceMin}`
-        // );
-        const response = await axios.get(
-          `${url}/vinted/offers?sort=${sort}&priceMin=${priceMin}`
-        );
+        const response = await axios.get(`${url}/vinted`);
         // console.log("Home - page > response > ", response);
         setData(response);
       } catch (error) {

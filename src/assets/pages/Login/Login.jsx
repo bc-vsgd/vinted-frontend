@@ -18,11 +18,11 @@ const Login = ({ url, setToken }) => {
     e.preventDefault();
     try {
       if (email && password) {
-        const response = await axios.post(`${url}/user/login`, {
+        const response = await axios.post(`${url}/vinted/user/login`, {
           email,
           password,
         });
-        console.log("response log in >>>>> ", response.data.foundUser.token);
+        // console.log("response log in >>>>> ", response.data.foundUser.token);
         const user = response.data.foundUser;
         const token = user.token;
         console.log("Log in >> token >> ", token);

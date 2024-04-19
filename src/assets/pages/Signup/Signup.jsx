@@ -20,7 +20,7 @@ const Signup = ({ url, setToken }) => {
     try {
       e.preventDefault();
       if (username && email && password) {
-        const response = await axios.post(`${url}/user/signup`, {
+        const response = await axios.post(`${url}/vinted/user/signup`, {
           username,
           email,
           password,
